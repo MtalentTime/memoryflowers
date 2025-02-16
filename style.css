@@ -1,3 +1,55 @@
+
+/* รีเซ็ตค่าเริ่มต้นให้เหมาะกับทุกอุปกรณ์ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ปรับขนาดเริ่มต้นของเว็บให้รองรับมือถือ */
+body {
+  font-family: Arial, sans-serif;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* ปรับขนาด container ให้ไม่ใหญ่เกินไป */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ปรับให้รูปภาพแสดงผลได้ดีบนมือถือ */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ปรับขนาดตัวอักษรให้เหมาะสมกับมือถือ */
+h1 {
+  font-size: 24px;
+  text-align: center;
+}
+
+/* ปรับ layout ให้เหมาะกับมือถือ */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  /* ถ้ามี sidebar ให้ซ่อนหรือลดขนาด */
+  .sidebar {
+    display: none;
+  }
+}
+
+
 body{background:url(img/bg5.jpg);background-repeat:repeat;}
 #header{padding:8px 0 8px;}
 #header a{text-decoration:none}
